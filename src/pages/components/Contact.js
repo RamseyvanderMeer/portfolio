@@ -57,7 +57,6 @@ export default function Contact() {
           Message:
         </label>
         <textarea
-          type="message"
           required
           value={message}
           className={contact.input}
