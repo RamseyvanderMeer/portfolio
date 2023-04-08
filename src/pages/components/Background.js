@@ -7,7 +7,7 @@ const settings = {
     useBouncyWalls: false,
   },
   particle: {
-    particleCount: 30,
+    particleCount: 35,
     color: "#ffffff",
     minSize: 1,
     maxSize: 3,
@@ -16,10 +16,10 @@ const settings = {
     directionAngle: 0,
     directionAngleVariance: 360,
     minSpeed: .1,
-    maxSpeed: .5,
+    maxSpeed: .8,
   },
   opacity: {
-    minOpacity: .1,
+    minOpacity: 0,
     maxOpacity: 0.7,
     opacityTransitionTime: 3000,
   },
