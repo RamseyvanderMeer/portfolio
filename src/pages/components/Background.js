@@ -2,25 +2,35 @@ import React from "react";
 import ParticleBackground from "react-particle-backgrounds";
 
 const settings = {
+  canvas: {
+    canvasFillSpace: true,
+    useBouncyWalls: false,
+  },
   particle: {
-    particleCount: 35,
-    color: "#fff",
+    particleCount: 30,
+    color: "#ffffff",
     minSize: 1,
-    maxSize: 4,
+    maxSize: 3,
   },
   velocity: {
-    minSpeed: 0.2,
-    maxSpeed: 0.4,
+    directionAngle: 0,
+    directionAngleVariance: 360,
+    minSpeed: .1,
+    maxSpeed: .5,
   },
   opacity: {
-    minOpacity: 0,
-    maxOpacity: 0.6,
-    opacityTransitionTime: 10000,
+    minOpacity: .1,
+    maxOpacity: 0.7,
+    opacityTransitionTime: 3000,
   },
 };
 
 const Background = function () {
-  return <ParticleBackground settings={settings} />;
+  return (
+    <div className="absolute w-screen h-screen">
+      <ParticleBackground settings={settings} />
+    </div>
+  );
 };
 
 export default Background;
