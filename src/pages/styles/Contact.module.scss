@@ -1,0 +1,89 @@
+.conatiner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  border: 1px solid white;
+  padding: 1.5em 4.5em;
+  border-radius: 1em;
+  opacity: 0.9;
+}
+.lable {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0 0;
+  text-align: left;
+  width: 100%;
+}
+.input {
+  padding: 5px;
+  margin: 5px 0;
+  outline: none;
+  background: none;
+  border: 0px none;
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 1.25em;
+}
+.title {
+  position: relative;
+  left: -10px;
+  text-align: left;
+  width: 100%;
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0 0 0.2em 0;
+  opacity: 1;
+}
+.buttonContainer {
+  margin: 1em 1em 0em 0em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.clear {
+  background-color: #131313;
+  color: white;
+  border: 0px none;
+  border-radius: 2.5em;
+  padding: 10px 15px;
+  margin: 5px 0;
+  outline: none;
+  border: 1px solid white;
+}
+.submit {
+  background-color: #131313;
+  color: white;
+  border: 0px none;
+  border-radius: 2.5em;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border: 1px solid white;
+}
+.submit:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+}
+.clear:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+}
