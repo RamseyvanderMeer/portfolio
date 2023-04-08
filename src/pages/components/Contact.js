@@ -1,32 +1,32 @@
-import { useState } from "react"
-import axios from "axios"
-import contact from "../styles/Contact.module.scss"
+import { useState } from "react";
+import axios from "axios";
+import contact from "../styles/Contact.module.scss";
 
 export default function Contact() {
-  const [message, setMessage] = useState("")
-  const [subject, setSubject] = useState("")
-  const [sender, setSender] = useState("")
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+  const [sender, setSender] = useState("");
 
   const SendMail = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     const response = await axios.post("/api/email", {
       message,
       subject,
       sender,
-    })
+    });
     if (response.status === 200) {
-      setMessage("")
-      setSubject("")
-      setSender("")
+      setMessage("");
+      setSubject("");
+      setSender("");
     }
-  }
+  };
 
   const ClearForm = (e) => {
-    e.preventDefault()
-    setMessage("")
-    setSubject("")
-    setSender("")
-  }
+    e.preventDefault();
+    setMessage("");
+    setSubject("");
+    setSender("");
+  };
 
   return (
     <div className={contact.conatiner}>
@@ -61,15 +61,19 @@ export default function Contact() {
           required
           value={message}
           className={contact.input}
-          rows="4"
-          cols="20"
+          rows={4}
+          cols={20}
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <div className={contact.buttonContainer}>
-          <button className={contact.clear} onClick={ClearForm}>Clear</button>
-          <button className={contact.submit} type="submit">Send</button>
+          <button className={contact.clear} onClick={ClearForm}>
+            Clear
+          </button>
+          <button className={contact.submit} type="submit">
+            Send
+          </button>
         </div>
       </form>
     </div>
-  )
+  );
 }
