@@ -23,14 +23,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -53,14 +53,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -83,14 +83,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -113,14 +113,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -143,14 +143,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -173,14 +173,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -203,14 +203,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}
@@ -233,14 +233,14 @@ export default function Projects() {
             <div className={projects.linkContainer}>
               <Image
                 className={projects.link}
-                src={github}
+                src={github as string}
                 alt="github"
                 width={24}
                 height={24}
               />
               <Image
                 className={projects.link}
-                src={link}
+                src={link as string}
                 alt="link"
                 width={24}
                 height={24}

@@ -1,4 +1,4 @@
-.conatiner {
+.container {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -6,6 +6,8 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
+  color: white;
+  z-index: 1;
 }
 .form {
   display: flex;
@@ -18,7 +20,7 @@
   border-radius: 1em;
   opacity: 0.9;
 }
-.lable {
+.label {
   color: white;
   font-size: 1rem;
   font-weight: 600;

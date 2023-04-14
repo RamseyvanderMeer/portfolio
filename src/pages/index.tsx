@@ -1,8 +1,8 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 // import { SignOutButton, SignInButton, useUser } from "@clerk/nextjs"
-import Background from "./components/Background.js";
-import Menu from "./components/Menu.js";
+import Background from "./components/Background";
+import Menu from "./components/Menu";
 
 import { api } from "~/utils/api";
 
@@ -38,11 +38,13 @@ const Home: NextPage = () => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <main className="relative h-width left-0 right-0 flex h-screen overflow-hidden border-slate-300 bg-gradient-to-b from-[#110811] to-[#000000]">
+      <main className="h-width z-1 relative left-0 right-0 flex h-screen overflow-hidden border-slate-300 bg-gradient-to-b from-[#110811] to-[#000000]">
         {/* {!user.isSignedIn && <SignInButton />}
         {!!user.isSignedIn && <SignOutButton />} */}
         <div>
-          <Menu />
+          <div className="absolute left-0 top-0 z-10 w-screen h-screen">
+            <Menu />
+          </div>
           <Background />
         </div>
       </main>

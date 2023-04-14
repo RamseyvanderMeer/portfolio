@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
 import { useState } from "react";
 import axios from "axios";
 import contact from "../styles/Contact.module.scss";
@@ -7,7 +8,7 @@ export default function Contact() {
   const [subject, setSubject] = useState("");
   const [sender, setSender] = useState("");
 
-  const SendMail = async (e) => {
+  const SendMail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const response = await axios.post("/api/email", {
       message,
@@ -19,9 +20,10 @@ export default function Contact() {
       setSubject("");
       setSender("");
     }
+    alert("Message Sent");
   };
 
-  const ClearForm = (e) => {
+  const ClearForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage("");
     setSubject("");
@@ -29,10 +31,10 @@ export default function Contact() {
   };
 
   return (
-    <div className={contact.conatiner}>
-      <form onSubmit={SendMail} className={contact.form}>
+    <div className={contact.container}>
+      <form onSubmit={SendMail} onReset={ClearForm} className={contact.form}>
         <h1 className={contact.title}>Contact</h1>
-        <label className={contact.lable} htmlFor="sender">
+        <label className={contact.label} htmlFor="sender">
           Contact Email:
         </label>
         <input
@@ -40,10 +42,9 @@ export default function Contact() {
           required
           value={sender}
           className={contact.input}
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           onChange={(e) => setSender(e.target.value)}
         ></input>
-        <label className={contact.lable} htmlFor="subject">
+        <label className={contact.label} htmlFor="subject">
           Subject:
         </label>
         <input
@@ -53,7 +54,7 @@ export default function Contact() {
           className={contact.input}
           onChange={(e) => setSubject(e.target.value)}
         ></input>
-        <label className={contact.lable} htmlFor="message">
+        <label className={contact.label} htmlFor="message">
           Message:
         </label>
         <textarea
@@ -65,7 +66,7 @@ export default function Contact() {
           onChange={(e) => setMessage(e.target.value)}
         ></textarea>
         <div className={contact.buttonContainer}>
-          <button className={contact.clear} onClick={ClearForm}>
+          <button className={contact.clear} type="reset">
             Clear
           </button>
           <button className={contact.submit} type="submit">

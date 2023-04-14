@@ -37,15 +37,15 @@ export default function About() {
         <section key={svg} className={about.svg}>
           <Image
             priority
-            src={ramsey}
+            src={ramsey as string}
             height={100}
             width={600}
             alt="ramsey"
-            className="w-screen h-auto opacity-1"
+            className="opacity-1 h-auto w-screen"
           />
           <Image
             priority
-            src={vanderMeer}
+            src={vanderMeer as string}
             height={100}
             width={1200}
             alt="van der meer"
@@ -84,7 +84,7 @@ export default function About() {
         {replay ? (
           <Image
             priority
-            src={repeat}
+            src={repeat as string}
             height={50}
             width={50}
             alt="replay"
@@ -94,7 +94,7 @@ export default function About() {
         ) : (
           <Image
             priority
-            src={repeat}
+            src={repeat as string}
             height={50}
             width={50}
             alt="replay"

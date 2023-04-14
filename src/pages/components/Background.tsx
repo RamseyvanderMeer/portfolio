@@ -1,5 +1,6 @@
 import React from "react";
 import ParticleBackground from "react-particle-backgrounds";
+import back from "../styles/Background.module.scss";
 
 const settings = {
   canvas: {
@@ -27,7 +28,7 @@ const settings = {
 
 const Background = function () {
   return (
-    <div className="absolute w-screen h-screen">
+    <div className="absolute w-screen h-screen z-1">
       <ParticleBackground settings={settings} />
     </div>
   );
