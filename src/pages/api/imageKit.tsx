@@ -24,7 +24,8 @@ interface Image {
   name: string;
   src: string;
   width: number;
-  height: number;
+    height: number;
+    nano: string;
 }
 
 async function fetchAllImages() {
@@ -41,6 +42,17 @@ async function fetchAllImages() {
       src: image.url,
       width: image.width,
       height: image.height,
+      nano: imagekit.url({
+        path: image.filePath,
+        transformation: [
+          {
+            height: 50,
+            width: 50,
+            cropMode: "pad",
+            quality: 60,
+          },
+        ],
+      }),
     });
   });
   return imageList;

@@ -8,13 +8,21 @@ import axios from "axios";
 export default function PhotoGallery({ currentIdx }) {
   const [index, setIndex] = useState(-1);
   const [images, setImages] = useState<Image[]>([]);
-  const [slides, setSlides] = useState<Image[]>([]);
+  const [slides, setSlides] = useState<Slide[]>([]);
 
   const handleClick = (index: number) => {
     setIndex(index);
   };
 
   interface Image {
+    name: string;
+    src: string;
+    width: number;
+    height: number;
+    nano: string;
+  }
+
+  interface Slide {
     name: string;
     src: string;
     width: number;
