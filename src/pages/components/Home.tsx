@@ -22,18 +22,34 @@ const Home = function ({ setCurrent }: HomeProps) {
         </div>
       </h1>
       <div className={home.sectionContainer}>
-        <div onClick={() => void setCurrent(1)} className={home.section}>
+        <a
+          href="#about"
+          onClick={() => void setCurrent(1)}
+          className={home.section}
+        >
           About 🙋🏻‍♂️
-        </div>
-        <div onClick={() => void setCurrent(2)} className={home.section}>
+        </a>
+        <a
+          href="#photography"
+          onClick={() => void setCurrent(2)}
+          className={home.section}
+        >
           Photos 📸
-        </div>
-        <div onClick={() => void setCurrent(3)} className={home.section}>
+        </a>
+        <a
+          href="#projects"
+          onClick={() => void setCurrent(3)}
+          className={home.section}
+        >
           Projects 👨🏻
-        </div>
-        <div onClick={() => void setCurrent(4)} className={home.section}>
+        </a>
+        <a
+          href="#contact"
+          onClick={() => void setCurrent(4)}
+          className={home.section}
+        >
           Contact ✉️
-        </div>
+        </a>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import menu from "../styles/Menu.module.scss";
 import Home from "./Home";
@@ -27,18 +27,36 @@ const Menu = function () {
     <Contact key="contact" />,
   ];
 
+  function checkURL() {
+    if (window.location.href.endsWith("#about")) {
+      setCurrent(1);
+    } else if (window.location.href.endsWith("#photography")) {
+      setCurrent(2);
+    } else if (window.location.href.endsWith("#projects")) {
+      setCurrent(3);
+    } else if (window.location.href.endsWith("#contact")) {
+      setCurrent(4);
+    } else if (window.location.href.endsWith("#") || window.location.href.endsWith("")) {
+      setCurrent(0);
+    }
+  }
+
+  useEffect(() => {
+    checkURL();
+  });
+
   return (
     <div>
       <div className={menu.menu}>
         {currentIdx != 0 ? (
-          <button onClick={() => setCurrent(0)}>
+          <a href="#" onClick={() => setCurrent(0)}>
             <Image
               src={hamburger as string}
               alt="hamburger"
               width={50}
               height={50}
             />
-          </button>
+          </a>
         ) : null}
       </div>
       <div className={menu.scaleIn} key={currentIdx}>
