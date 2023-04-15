@@ -14,6 +14,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
+        <meta charSet="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Ramsey van der Meer | Portfolio Website</title>
         <meta
           name="description"
@@ -28,8 +30,8 @@ const Home: NextPage = () => {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#ff8000" />
+        <meta name="robots" content="index, follow" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -48,8 +50,8 @@ const Home: NextPage = () => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-              <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-              <link rel="canonical" href="https://ramseyvdn.com"></link>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+        <link rel="canonical" href="https://ramseyvdn.com"></link>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
