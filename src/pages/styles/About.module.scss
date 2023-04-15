@@ -3,7 +3,8 @@
   font-weight: 400;
   font-size: 300%;
   opacity: 0;
-  animation: intro 3.2s ease-out 1s;
+  animation: intro 3.2s ease-out 0.4s;
+  text-align: left;
 }
 
 @keyframes intro {
@@ -26,7 +27,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  height: -webkit-fill-available;
+
   z-index: 1;
   animation: logo 5.5s ease-out 4s;
   opacity: 0;
@@ -74,6 +75,19 @@
   width: 18em;
   bottom: 0;
   left: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .crawl {
+    font-size: 200%;
+    width: 15em;
+    margin-left: -7.5em;
+  }
+  .introText{
+    font-size: 6vw;
+    width: 85vw;
+    border: 1px solid white;
+  }
 }
 
 .crawl:after {

@@ -3,6 +3,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 
 import { api } from "~/utils/api";
 
+export { reportWebVitals } from "next-axiom";
+
 import "~/styles/globals.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
