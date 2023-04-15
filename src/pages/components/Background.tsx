@@ -1,6 +1,5 @@
 import React from "react";
 import ParticleBackground from "react-particle-backgrounds";
-import back from "../styles/Background.module.scss";
 
 const settings = {
   canvas: {

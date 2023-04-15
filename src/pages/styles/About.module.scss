@@ -26,6 +26,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  height: -webkit-fill-available;
   z-index: 1;
   animation: logo 5.5s ease-out 4s;
   opacity: 0;
@@ -114,7 +115,7 @@
   bottom: 5vh;
   right: 5vw;
   z-index: 2;
-  opacity: .8;
+  opacity: 0.8;
   animation: replay 5s ease-out;
   transition: transform 0.35s;
 }
@@ -138,17 +139,16 @@
   }
 }
 
-
 @keyframes replay {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0.8;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
 }

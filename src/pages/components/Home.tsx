@@ -15,12 +15,12 @@ interface HomeProps {
 const Home = function ({ setCurrent }: HomeProps) {
   return (
     <div className=" absolute left-0 top-0 z-10 flex h-screen w-screen flex-col items-center justify-center overflow-scroll text-white">
-      <div className={home.content}>
+      <h1 className={home.content}>
         Hey 👋 I&apos;m{<br />}Ramsey,{<br />}
         <div className={home.text}>
           <Typewriter options={settings} />
         </div>
-      </div>
+      </h1>
       <div className={home.sectionContainer}>
         <div onClick={() => void setCurrent(1)} className={home.section}>
           About 🙋🏻‍♂️

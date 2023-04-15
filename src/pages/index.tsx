@@ -14,8 +14,22 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Ramsey van der Meer</title>
-        <meta name="description" content="Ramsey van der Meer - portfolio" />
+        <title>Ramsey van der Meer | Portfolio Website</title>
+        <meta
+          name="description"
+          content="Welcome to my personal website! Here, you'll find a collection of my past and current projects, as well as some of my favorite photographs I have taken. I'm passionate about engineering, and love to find solutions to unique problems. Take a look around and let me know what you think!"
+        />
+        <meta
+          name="keywords"
+          content="Personal website, Portfolio, Projects, Photography, Software Engineering, Showcase, Visuals, Digital portfolio, Web Design"
+        />
+        <meta name="author" content="Ramsey van der Meer" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="theme-color" content="#ff8000" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -34,7 +48,8 @@ const Home: NextPage = () => {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+              <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+              <link rel="canonical" href="https://ramseyvdn.com"></link>
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
@@ -42,7 +57,7 @@ const Home: NextPage = () => {
         {/* {!user.isSignedIn && <SignInButton />}
         {!!user.isSignedIn && <SignOutButton />} */}
         <div>
-          <div className="absolute left-0 top-0 z-10 w-screen h-screen">
+          <div className="absolute left-0 top-0 z-10 h-screen w-screen">
             <Menu />
           </div>
           <Background />
