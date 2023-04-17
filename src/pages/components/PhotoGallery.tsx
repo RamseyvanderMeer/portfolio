@@ -29,7 +29,7 @@ export default function PhotoGallery({ currentIdx }) {
     height: number;
   }
 
-    useEffect(() => {
+  useEffect(() => {
     async function fetchData() {
       try {
         const { data } = await axios.get<Image[]>("/api/imageKit");
@@ -51,26 +51,22 @@ export default function PhotoGallery({ currentIdx }) {
   }, [images]);
 
   return (
-    <div>
-      {currentIdx == 2 ? (
-        <div className="z-10 border-none p-3 opacity-100">
-          <div className="h-screen overflow-scroll">
-            <Gallery
-              images={images}
-              onClick={handleClick}
-              enableImageSelection={false}
-              rowHeight={300}
-              margin={3}
-            />
-          </div>
-          <Lightbox
-            slides={slides}
-            open={index >= 0}
-            index={index}
-            close={() => setIndex(-1)}
-          />
-        </div>
-      ) : null}
+    <div className="z-10 border-none p-3">
+      <div className="h-screen overflow-scroll">
+        <Gallery
+          images={images}
+          onClick={handleClick}
+          enableImageSelection={false}
+          rowHeight={300}
+          margin={3}
+        />
+      </div>
+      <Lightbox
+        slides={slides}
+        open={index >= 0}
+        index={index}
+        close={() => setIndex(-1)}
+      />
     </div>
   );
 }
