@@ -4,6 +4,7 @@
  */
 !process.env.SKIP_ENV_VALIDATION && (await import("./src/env.mjs"));
 import { withAxiom } from "next-axiom";
+import withBundleAnalyzerModule from "@next/bundle-analyzer";
 
 /** @type {import("next").NextConfig} */
 const config = withAxiom({
@@ -20,4 +21,10 @@ const config = withAxiom({
     defaultLocale: "en",
   },
 });
-export default config;
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const withBundleAnalyzer = withBundleAnalyzerModule({
+  enabled: process.env.ANALYZE === "true",
+  openAnalyzer: false,
+});
+
+export default withBundleAnalyzer(config);

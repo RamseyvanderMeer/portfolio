@@ -29,7 +29,7 @@ export default function PhotoGallery({ currentIdx }) {
     height: number;
   }
 
-  useEffect(() => {
+    useEffect(() => {
     async function fetchData() {
       try {
         const { data } = await axios.get<Image[]>("/api/imageKit");

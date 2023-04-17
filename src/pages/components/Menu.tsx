@@ -28,6 +28,7 @@ const Menu = function () {
   ];
 
   function checkURL() {
+    console.log(window.location.href);
     if (window.location.href.endsWith("#about")) {
       setCurrent(1);
     } else if (window.location.href.endsWith("#photography")) {
@@ -36,8 +37,15 @@ const Menu = function () {
       setCurrent(3);
     } else if (window.location.href.endsWith("#contact")) {
       setCurrent(4);
-    } else if (window.location.href.endsWith("#") || window.location.href.endsWith("")) {
+    } else if (
+      window.location.href.endsWith("#") ||
+      window.location.href.endsWith("") ||
+      window.location.href.endsWith("/") ||
+      window.location.href.endsWith("/#")
+    ) {
       setCurrent(0);
+    } else {
+      console.log("Invalid URL");
     }
   }
 
