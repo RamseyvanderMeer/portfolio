@@ -56,26 +56,32 @@ export default function About() {
         <div key={crawl} className={about.crawl}>
           <div className={about.content}>
             <p className={about.title}>Year II</p>
-            <p className={about.subtitle}>The Grind</p>
+            <p className={about.subtitle}>The Learning Continues . . .</p>
             <br />
             <p className={about.text}>
-              A student named Ramsey, who sought knowledge in the ways of
-              computer engineering at the University of Illinois Urbana
-              Champaign. But his journey was not limited to the confines of the
-              classroom, as he also found joy in exploring the great outdoors
-              through camping, hiking, fishing, and mountain biking.
+              Hello! I&apos;m a sceond year student studying computer
+              engineering at the University of Illinois Urbana Champaign. I am
+              an aspiring coder, and love to challenge myself to learn about new
+              and exiting technologies as well as hone my existing skills. This
+              summer I will be working as a software engineering intern at
+              SpaceX and hope to learn a lot through this amazing experience.
             </p>
+            <br />
             <p className={about.text}>
-              As he honed his physical prowess and strengthened his connection
-              with the natural world, he discovered a new passion for the game
-              of basketball, becoming a skilled master of the court.
+              Ouside of school I love all things travel. Some of my favorite
+              trips have been exploring the rocky landscape around Moab Utah and
+              backpacking through the cities of Europe.
             </p>
+            <br />
             <p className={about.text}>
-              Guided by his determination and the force within, Ramsey continues
-              his journey to master both the physical and mental aspects of his
-              craft. For he know that with each new challenge, he become
-              stronger and closer to the greatness that lies ahead. The force is
-              strong with this one.
+              I&apos;m also a huge fan of photography. I love to capture the
+              beauty of the world around me express it through my lens. You can
+              check out some of them on the photography page.
+            </p>
+            <br />
+            <p className={about.text}>
+              Please check out the rest of the site to see some of my projects
+              or get in touch with me though the form!
             </p>
           </div>
         </div>
