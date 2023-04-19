@@ -22,7 +22,7 @@ const Menu = function () {
   const data = [
     <Home key="home" setCurrent={setCurrent} />,
     <About key="about" />,
-    <PhotoGallery key="gallery" currentIdx={currentIdx} />,
+    <PhotoGallery key="gallery"/>,
     <Projects key="projects" />,
     <Contact key="contact" />,
   ];
@@ -69,7 +69,7 @@ const Menu = function () {
       </div>
       <div className={menu.scaleIn} key={currentIdx}>
         {currentIdx == 2 ? (
-          <PhotoGallery currentIdx={currentIdx} />
+          <PhotoGallery/>
         ) : (
           data[currentIdx]
         )}
