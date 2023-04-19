@@ -28,7 +28,6 @@ const Menu = function () {
   ];
 
   function checkURL() {
-    console.log(window.location.href);
     if (window.location.href.endsWith("#about")) {
       setCurrent(1);
     } else if (window.location.href.endsWith("#photography")) {
@@ -45,7 +44,7 @@ const Menu = function () {
     ) {
       setCurrent(0);
     } else {
-      console.log("Invalid URL");
+        setCurrent(0);
     }
   }
 
