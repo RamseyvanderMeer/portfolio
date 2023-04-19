@@ -45,14 +45,14 @@
   font-weight: 600;
   font-size: 2vw;
   background-color: black;
+  transition: ease-in-out;
+  transition-duration: 0.3s;
 }
 
 .section:hover {
   background-color: white;
   color: black;
   font-weight: 800;
-  transition: ease-in-out;
-  transition-duration: 0.3s;
 }
 
 @media only screen and (max-width: 600px) {
