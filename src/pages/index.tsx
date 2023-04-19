@@ -4,10 +4,7 @@ import Head from "next/head";
 import Background from "./components/Background";
 import Menu from "./components/Menu";
 
-import { api } from "~/utils/api";
-
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
 
   // const user = useUser()
 
