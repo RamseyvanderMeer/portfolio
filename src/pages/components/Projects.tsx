@@ -33,11 +33,7 @@ export default function Projects() {
                   <br />
                   <p>
                     Technology:{" "}
-                    {typeof project.tech === "object" &&
-                    project.tech !== null &&
-                    project.tech !== undefined
-                      ? project?.tech?.join(", ")
-                      : project.tech}
+                    {project.tech}
                   </p>
                 </div>
                 <div className={styles.linkContainer}>
