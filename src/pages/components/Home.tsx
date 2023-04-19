@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import home from "../styles/Home.module.scss";
 
 const settings = {
-  strings: ["Student", "Developer", "Photographer", "Investor"],
+  strings: ["Student", "Developer", "Photographer"],
   autoStart: true,
   loop: true,
 };
