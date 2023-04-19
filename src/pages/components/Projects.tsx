@@ -33,8 +33,8 @@ export default function Projects() {
               <div className={styles.title}>
                 <h1>{project.title}</h1>
                 <h2 className={styles.date}>
-                  {project.updatedAt.getMonth()}/
-                  {project.updatedAt.getFullYear()}
+                  {project.date.getMonth()}/
+                  {project.date.getFullYear()}
                 </h2>
               </div>
               <div className={styles.description}>
