@@ -5,7 +5,7 @@ import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import axios from "axios";
 
-export default function PhotoGallery({ currentIdx }) {
+export default function PhotoGallery() {
   const [index, setIndex] = useState(-1);
   const [images, setImages] = useState<Image[]>([]);
   const [slides, setSlides] = useState<Slide[]>([]);

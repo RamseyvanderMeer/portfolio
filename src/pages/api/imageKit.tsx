@@ -1,5 +1,5 @@
 import ImageKit from "imagekit";
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 interface ImageKitConfig {
   publicKey: string;

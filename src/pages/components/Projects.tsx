@@ -21,7 +21,7 @@ export default function Projects() {
           </div>
         ) : null}
 
-        {!data ? (
+        {!isLoading && !data ? (
           <div className={styles.item}>
             <LoadingPage />
           </div>
