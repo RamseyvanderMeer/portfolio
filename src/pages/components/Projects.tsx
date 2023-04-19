@@ -1,22 +1,32 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/Projects.module.scss";
 import github from "../images/github.svg";
 import link from "../images/link.svg";
+import { LoadingPage } from "./Loading";
 
 import Link from "next/link";
 
 import { api } from "~/utils/api";
 
 export default function Projects() {
-  const { data } = api.posts.getAll.useQuery();
+  const { data, isLoading } = api.posts.getAll.useQuery();
 
   return (
     <div className={styles.container}>
       <div className={styles.list}>
+        {isLoading ? (
+          <div className={styles.item}>
+            <LoadingPage />
+          </div>
+        ) : null}
+
+        {!data ? (
+          <div className={styles.item}>
+            <LoadingPage />
+          </div>
+        ) : null}
+
         {data?.map((project) =>
           project.published ? (
             <div key={project.id} className={styles.item}>
@@ -31,10 +41,7 @@ export default function Projects() {
                 <div className="max-h-40 overflow-y-scroll">
                   <p>{project.content}</p>
                   <br />
-                  <p>
-                    Technology:{" "}
-                    {project.tech}
-                  </p>
+                  <p>Technology: {project.tech}</p>
                 </div>
                 <div className={styles.linkContainer}>
                   {project.github ? (
