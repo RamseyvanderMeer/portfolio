@@ -1,6 +1,6 @@
 import React from "react";
 
-export function LoadingSpinner() {
+export default function LoadingSpinner() {
   return (
     <div className="text-center">
       <div role="status">
