@@ -43,19 +43,49 @@
 }
 
 .title {
+  position: relative;
+  top: -30px;
   width: 40vw;
   font-size: 2rem;
   font-weight: bold;
   color: white;
   text-align: left;
   padding: 0 2vw;
+  line-height: 0.9;
 }
 
 .description {
   width: 50vw;
   font-size: 1rem;
   color: white;
+  overflow-y: scroll;
+}
 
+.text {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 40vh;
+}
+
+.text::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+.text::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.text::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.text::-webkit-scrollbar-thumb:hover {
+  background: grey;
 }
 
 .date {
@@ -63,7 +93,7 @@
   color: aquamarine;
   font-size: 1.5rem;
   font-style: italic;
-  top: -10px;
+  top: 5px;
   left: 40px;
   font-weight: 200;
 }
@@ -107,6 +137,7 @@
   /* Handle on hover */
   .list::-webkit-scrollbar-thumb:hover {
     background: grey;
+    cursor: pointer;
   }
 }
 
@@ -117,13 +148,19 @@
     font-weight: bold;
     color: white;
     text-align: left;
-    padding: 0 2vw;
+    padding: 0;
+    top: 0;
   }
 
   .description {
     width: 80vw;
     font-size: 1rem;
     color: white;
+    margin: 25px 0;
+  }
+
+  .date{
+    left: 0;
   }
 
   .item {
@@ -131,5 +168,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 0 5vh 0;
+  }
+
+  .text{
+    margin: 0 0 10px 0;
   }
 }

@@ -38,7 +38,7 @@ export default function Projects() {
                 </h2>
               </div>
               <div className={styles.description}>
-                <div className="max-h-40 overflow-y-scroll">
+                <div className={styles.text}>
                   <p>{project.content}</p>
                   <br />
                   <p>Technology: {project.tech}</p>
