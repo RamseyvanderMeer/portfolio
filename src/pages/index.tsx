@@ -1,11 +1,14 @@
 import { type NextPage } from "next";
 import Head from "next/head";
 // import { SignOutButton, SignInButton, useUser } from "@clerk/nextjs"
-import Background from "./components/Background";
-import Menu from "./components/Menu";
+import dynamic from "next/dynamic";
+import { LoadingPage } from "./components/Loading";
+const Menu = dynamic(() => import("./components/Menu"), {
+  loading: () => <LoadingPage size={50} />,
+});
+const Background = dynamic(() => import("./components/Background"));
 
 const Home: NextPage = () => {
-
   // const user = useUser()
 
   return (
