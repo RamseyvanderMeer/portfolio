@@ -2,8 +2,10 @@
 import { useState } from "react";
 import axios from "axios";
 import contact from "../styles/Contact.module.scss";
-
-export default function Contact() {
+interface HomeProps {
+  setCurrent: (current: number) => void;
+}
+export default function Contact({setCurrent} : HomeProps) {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [sender, setSender] = useState("");
@@ -20,7 +22,14 @@ export default function Contact() {
       setSubject("");
       setSender("");
     }
-    alert("Message Sent");
+      alert("Message Sent");
+      const nextURL = "/";
+      const nextTitle = "Home Page";
+      const nextState = { additionalInformation: "Updated the URL with JS" };
+
+      // This will create a new entry in the browser's history, without reloading
+      window.history.pushState(nextState, nextTitle, nextURL);
+      setCurrent(0);
   };
 
   const ClearForm = (e: React.FormEvent<HTMLFormElement>) => {

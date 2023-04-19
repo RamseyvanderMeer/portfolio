@@ -24,7 +24,7 @@ const Menu = function () {
     <About key="about" />,
     <PhotoGallery key="gallery"/>,
     <Projects key="projects" />,
-    <Contact key="contact" />,
+    <Contact key="contact" setCurrent={setCurrent} />,
   ];
 
   function checkURL() {
