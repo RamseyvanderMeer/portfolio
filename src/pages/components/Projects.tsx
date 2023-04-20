@@ -33,8 +33,7 @@ export default function Projects() {
               <div className={styles.title}>
                 <h1>{project.title}</h1>
                 <h2 className={styles.date}>
-                  {project.date.getMonth()}/
-                  {project.date.getFullYear()}
+                  {project.date.getMonth()}/{project.date.getFullYear()}
                 </h2>
               </div>
               <div className={styles.description}>
@@ -52,6 +51,7 @@ export default function Projects() {
                         alt="github"
                         width={24}
                         height={24}
+                        loading="lazy"
                       />
                     </Link>
                   ) : null}
@@ -63,6 +63,7 @@ export default function Projects() {
                         alt="link"
                         width={24}
                         height={24}
+                        loading="lazy"
                       />
                     </Link>
                   ) : null}

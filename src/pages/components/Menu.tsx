@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import menu from "../styles/Menu.module.scss";
-import Home from "./Home";
-import Contact from "./Contact";
-import PhotoGallery from "./PhotoGallery";
-import Projects from "./Projects";
-import About from "./About";
+
+const Home = dynamic(() => import("./Home"));
+const About = dynamic(() => import("./About"));
+const PhotoGallery = dynamic(() => import("./PhotoGallery"));
+const Projects = dynamic(() => import("./Projects"));
+const Contact = dynamic(() => import("./Contact"));
+
+import styles from "../styles/Menu.module.scss";
 import hamburger from "../images/menu.svg";
 
 const Menu = function () {
@@ -53,8 +56,8 @@ const Menu = function () {
   });
 
   return (
-    <div>
-      <div className={menu.menu}>
+    <div className="z-50">
+      <div className={styles.menu}>
         {currentIdx != 0 ? (
           <a href="#" onClick={() => setCurrent(0)}>
             <Image
@@ -62,18 +65,15 @@ const Menu = function () {
               alt="hamburger"
               width={50}
               height={50}
+              loading="lazy"
             />
           </a>
         ) : null}
       </div>
-      <div className={menu.scaleIn} key={currentIdx}>
-        {currentIdx == 2 ? (
-          <PhotoGallery/>
-        ) : (
-          data[currentIdx]
-        )}
+      <div className={styles.scaleIn} key={currentIdx}>
+        {data[currentIdx]}
       </div>
-      <div className={menu.scaleOut} key={prevIdx}>
+      <div className={styles.scaleOut} key={prevIdx}>
         {data[prevIdx]}
       </div>
     </div>

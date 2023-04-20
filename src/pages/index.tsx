@@ -15,7 +15,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Ramsey van der Meer | Portfolio Website</title>
         <meta
           name="description"
