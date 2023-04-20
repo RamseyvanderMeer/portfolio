@@ -27,51 +27,49 @@ export default function Projects() {
           </div>
         ) : null}
 
-        {data?.map((project) =>
-          project.published ? (
-            <div key={project.id} className={styles.item}>
-              <div className={styles.title}>
-                <h1>{project.title}</h1>
-                <h2 className={styles.date}>
-                  {project.date.getMonth()}/{project.date.getFullYear()}
-                </h2>
+        {data?.map((project) => (
+          <div key={project.id} className={styles.item}>
+            <div className={styles.title}>
+              <h1>{project.title}</h1>
+              <h2 className={styles.date}>
+                {project.date.getMonth()}/{project.date.getFullYear()}
+              </h2>
+            </div>
+            <div className={styles.description}>
+              <div className={styles.text}>
+                <p>{project.content}</p>
+                <br />
+                <p>Technology: {project.tech}</p>
               </div>
-              <div className={styles.description}>
-                <div className={styles.text}>
-                  <p>{project.content}</p>
-                  <br />
-                  <p>Technology: {project.tech}</p>
-                </div>
-                <div className={styles.linkContainer}>
-                  {project.github ? (
-                    <Link href={project.github}>
-                      <Image
-                        className={styles.link}
-                        src={github as string}
-                        alt="github"
-                        width={24}
-                        height={24}
-                        loading="lazy"
-                      />
-                    </Link>
-                  ) : null}
-                  {project.link ? (
-                    <Link href={project.link}>
-                      <Image
-                        className={styles.link}
-                        src={link as string}
-                        alt="link"
-                        width={24}
-                        height={24}
-                        loading="lazy"
-                      />
-                    </Link>
-                  ) : null}
-                </div>
+              <div className={styles.linkContainer}>
+                {project.github ? (
+                  <Link href={project.github}>
+                    <Image
+                      className={styles.link}
+                      src={github as string}
+                      alt="github"
+                      width={24}
+                      height={24}
+                      loading="lazy"
+                    />
+                  </Link>
+                ) : null}
+                {project.link ? (
+                  <Link href={project.link}>
+                    <Image
+                      className={styles.link}
+                      src={link as string}
+                      alt="link"
+                      width={24}
+                      height={24}
+                      loading="lazy"
+                    />
+                  </Link>
+                ) : null}
               </div>
             </div>
-          ) : null
-        )}
+          </div>
+        ))}
       </div>
     </div>
   );

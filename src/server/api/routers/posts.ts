@@ -6,6 +6,9 @@ export const postsRouter = createTRPCRouter({
       orderBy: {
         date: "desc",
       },
+      where: {
+        published: true,
+      },
     });
   }),
 });
