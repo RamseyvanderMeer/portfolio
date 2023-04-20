@@ -57,7 +57,7 @@ const Menu = function () {
 
   return (
     <div className="z-50">
-      <div className={styles.menu}>
+      <div className="absolute right-4 top-3 z-50 h-12 w-14 hover:cursor-pointer">
         {currentIdx != 0 ? (
           <a href="#" onClick={() => setCurrent(0)}>
             <Image

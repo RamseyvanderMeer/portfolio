@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import Image from "next/image";
+
 import about from "../styles/About.module.scss";
 import ramsey from "../images/Ramsey.svg";
 import vanderMeer from "../images/vanderMeer.svg";
 import repeat from "../images/replay.svg";
-import Image from "next/image";
 
 export default function About() {
   const [intro, setIntro] = useState(0);

@@ -3,6 +3,7 @@ import Head from "next/head";
 // import { SignOutButton, SignInButton, useUser } from "@clerk/nextjs"
 import dynamic from "next/dynamic";
 import { LoadingPage } from "./components/Loading";
+
 const Menu = dynamic(() => import("./components/Menu"), {
   loading: () => <LoadingPage size={50} />,
 });
