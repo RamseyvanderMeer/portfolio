@@ -31,7 +31,7 @@ const Home: NextPage = () => {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta name="theme-color" content="#ff8000" />
+        <meta name="theme-color" content="#000000" />
 
         <meta
           name="viewport"
