@@ -24,8 +24,8 @@ interface Image {
   name: string;
   src: string;
   width: number;
-    height: number;
-    nano: string;
+  height: number;
+  nano: string;
 }
 
 async function fetchAllImages() {
@@ -66,6 +66,7 @@ export default async function handler(
     const images = await fetchAllImages();
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
+    res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate");
     res.end(JSON.stringify(images));
   } catch (error) {
     res.statusCode = 500;
