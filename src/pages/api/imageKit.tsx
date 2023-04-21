@@ -64,7 +64,8 @@ export default async function handler(
 ) {
   try {
     const images = await fetchAllImages();
-    res.statusCode = 200;
+      res.statusCode = 200;
+      
     res.setHeader("Content-Type", "application/json");
     res.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate");
     res.end(JSON.stringify(images));
