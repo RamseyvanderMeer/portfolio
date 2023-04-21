@@ -43,7 +43,11 @@ export default function Projects() {
               </div>
               <div className={styles.linkContainer}>
                 {project.github ? (
-                  <Link href={project.github}>
+                  <Link
+                    href={project.github}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <Image
                       className={styles.link}
                       src={github as string}
@@ -55,7 +59,11 @@ export default function Projects() {
                   </Link>
                 ) : null}
                 {project.link ? (
-                  <Link href={project.link}>
+                  <Link
+                    href={project.link}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     <Image
                       className={styles.link}
                       src={link as string}
