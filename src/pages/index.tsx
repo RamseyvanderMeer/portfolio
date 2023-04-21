@@ -27,11 +27,11 @@ const Home: NextPage = () => {
           content="Personal website, Portfolio, Projects, Photography, Software Engineering, Showcase, Visuals, Digital portfolio, Web Design"
         />
         <meta name="author" content="Ramsey van der Meer" />
-        {/* <meta
+        <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
-        /> */}
-        <meta name="theme-color" content="#ff8000" />
+        />
+        {/* <meta name="theme-color" content="#ff8000" /> */}
         <meta name="robots" content="index, follow" />
         <link
           rel="apple-touch-icon"
