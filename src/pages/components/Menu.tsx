@@ -15,7 +15,7 @@ const Menu = function () {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [prevIdx, setPrevIdx] = useState(-1);
 
-  function setCurrent(index: number) {
+  const setCurrent = (index: number) => {
     if (index != currentIdx) {
       setPrevIdx(currentIdx);
       setCurrentIdx(index);
@@ -30,7 +30,7 @@ const Menu = function () {
     <Contact key="contact" setCurrent={setCurrent} />,
   ];
 
-  function checkURL() {
+  const checkURL = () => {
     if (window.location.href.endsWith("#about")) {
       setCurrent(1);
     } else if (window.location.href.endsWith("#photography")) {
